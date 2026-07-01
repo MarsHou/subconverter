@@ -1,0 +1,16 @@
+# keep the build context small and avoid leaking host build artifacts into the image
+.git
+.github
+.idea
+.vscode
+cmake-build-debug
+build
+CMakeCache.txt
+CMakeFiles
+cmake_install.cmake
+Makefile
+subconverter
+subconverter.exe
+base/cache
+*.tar.gz
+*.7z

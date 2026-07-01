@@ -146,7 +146,7 @@ int WebServer::start_web_server_multi(listener_args *args)
         writeLog(0, "handle_cmd:    " + req.method + " handle_uri:    " + req.target, LOG_LEVEL_VERBOSE);
         writeLog(0, "handle_header: " + dump(req.headers), LOG_LEVEL_VERBOSE);
 
-        if (req.has_header("SubConverter-Request"))
+        if (req.has_header("X-Client-Fetch"))
         {
             res.status = 500;
             res.set_content("Loop request detected!", "text/plain");
